@@ -105,23 +105,13 @@
                 android:text="Desc"
                 android:textColor="#fff" />
             <TextView
-                android:id="@+id/source"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_below="@id/title"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginTop="26dp"
-                android:text="Source"
-                android:textColor="#fff" />
-            <TextView
                 android:id="@+id/time"
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
                 android:layout_below="@id/title"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
-                android:layout_marginTop="46dp"
+                android:layout_marginTop="30dp"
                 android:text="Time"
                 android:textColor="#fff" />
         </RelativeLayout>

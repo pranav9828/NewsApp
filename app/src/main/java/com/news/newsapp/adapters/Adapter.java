@@ -84,7 +84,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder>{
         holder.title.setText(news.get(position).getTitle());
         holder.time.setText("\u2022" + Utils.DateToTimeFormat(model.getPublishedAt()));
         holder.publishedAd.setText(Utils.DateFormat(model.getPublishedAt()));
-//        holder.source.setText(news.get(position).getSource().getName());
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -96,7 +95,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder>{
                 intent.putExtra("publishedAd", Utils.DateFormat(model.getPublishedAt()));
                 intent.putExtra("imageUrl", model.getUrlToImage());
                 intent.putExtra("url", model.getUrl());
-//                intent.putExtra("source", model.getSource().getName());
                 context.startActivity(intent);
             }
         });
@@ -109,7 +107,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder>{
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 
-        TextView author, title, description, time, publishedAd, source;
+        TextView author, title, description, time, publishedAd;
         ImageView imageView;
         ProgressBar progressBar;
         CardView cardView;
@@ -122,7 +120,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder>{
             publishedAd = itemView.findViewById(R.id.publishedAt);
             imageView = itemView.findViewById(R.id.img);
             progressBar = itemView.findViewById(R.id.progress_load_image);
-//            source = itemView.findViewById(R.id.source);
             cardView = itemView.findViewById(R.id.cardView);
         }
     }
