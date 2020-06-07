@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                         news.setTitle(jsonObject.getString("title"));
                         news.setPublishedAt(jsonObject.getString("publishedAt"));
                         news.setUrlToImage(jsonObject.getString("urlToImage"));
-                        news.setSource(jsonObject.getString("source"));
+//                        news.setSource(jsonObject.getString("name"));
                         newsList.add(news);
                     } catch (JSONException e) {
                         e.printStackTrace();

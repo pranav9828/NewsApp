@@ -7,12 +7,12 @@ public class News {
     private String url;
     private String publishedAt;
     private String urlToImage;
-    private String source;
+    private Source source;
 
     public News() {
     }
 
-    public News(String author, String title, String description, String url, String publishedAt, String urlToImage, String source) {
+    public News(String author, String title, String description, String url, String publishedAt, String urlToImage, Source source) {
         this.author = author;
         this.title = title;
         this.description = description;
@@ -70,11 +70,11 @@ public class News {
         this.urlToImage = urlToImage;
     }
 
-    public String getSource() {
+    public Source getSource() {
         return source;
     }
 
-    public void setSource(String source) {
+    public void setSource(Source source) {
         this.source = source;
     }
 }

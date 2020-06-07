@@ -1,6 +1,7 @@
 package com.news.newsapp.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -22,6 +24,7 @@ import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.Target;
 import com.news.newsapp.R;
+import com.news.newsapp.activities.NewsDetail;
 import com.news.newsapp.activities.Utils;
 import com.news.newsapp.model.News;
 
@@ -49,7 +52,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder>{
     @Override
     public void onBindViewHolder(@NonNull final MyViewHolder holder, int position) {
         final MyViewHolder holders =  holder;
-        News model = news.get(position);
+        final News model = news.get(position);
 
         RequestOptions requestOptions = new RequestOptions();
         requestOptions.placeholder(Utils.getRandomDrawbleColor());
@@ -81,7 +84,22 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder>{
         holder.title.setText(news.get(position).getTitle());
         holder.time.setText("\u2022" + Utils.DateToTimeFormat(model.getPublishedAt()));
         holder.publishedAd.setText(Utils.DateFormat(model.getPublishedAt()));
-        holder.source.setText(news.get(position).getSource());
+//        holder.source.setText(news.get(position).getSource().getName());
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, NewsDetail.class);
+                intent.putExtra("title", model.getTitle());
+                intent.putExtra("author", model.getAuthor());
+                intent.putExtra("description", model.getDescription());
+                intent.putExtra("time", Utils.DateToTimeFormat(model.getPublishedAt()));
+                intent.putExtra("publishedAd", Utils.DateFormat(model.getPublishedAt()));
+                intent.putExtra("imageUrl", model.getUrlToImage());
+                intent.putExtra("url", model.getUrl());
+//                intent.putExtra("source", model.getSource().getName());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -94,6 +112,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder>{
         TextView author, title, description, time, publishedAd, source;
         ImageView imageView;
         ProgressBar progressBar;
+        CardView cardView;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             author = itemView.findViewById(R.id.author);
@@ -103,7 +122,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder>{
             publishedAd = itemView.findViewById(R.id.publishedAt);
             imageView = itemView.findViewById(R.id.img);
             progressBar = itemView.findViewById(R.id.progress_load_image);
-            source = itemView.findViewById(R.id.source);
+//            source = itemView.findViewById(R.id.source);
+            cardView = itemView.findViewById(R.id.cardView);
         }
     }
 }
