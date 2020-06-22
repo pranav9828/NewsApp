@@ -4,7 +4,7 @@ android {
     compileSdkVersion 29
 
     defaultConfig {
-        applicationId "com.news.newsapp"
+        applicationId "com.seithigal.newsapp"
         minSdkVersion 15
         targetSdkVersion 29
         versionCode 1

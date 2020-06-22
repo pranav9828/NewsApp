@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.news.newsapp",
+  "applicationId": "com.seithigal.newsapp",
   "variantName": "release",
   "elements": [
     {

@@ -1,4 +1,4 @@
-package com.news.newsapp.adapters;
+package com.seithigal.newsapp.adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -23,10 +23,10 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.Target;
-import com.news.newsapp.R;
-import com.news.newsapp.activities.NewsDetail;
-import com.news.newsapp.activities.Utils;
-import com.news.newsapp.model.News;
+import com.seithigal.newsapp.R;
+import com.seithigal.newsapp.activities.NewsDetail;
+import com.seithigal.newsapp.activities.Utils;
+import com.seithigal.newsapp.model.News;
 
 import java.util.List;
 

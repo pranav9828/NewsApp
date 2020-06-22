@@ -1,4 +1,4 @@
-package com.news.newsapp;
+package com.seithigal.newsapp;
 
 import android.content.Context;
 

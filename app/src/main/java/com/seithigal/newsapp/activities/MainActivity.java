@@ -1,4 +1,4 @@
-package com.news.newsapp.activities;
+package com.seithigal.newsapp.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -11,13 +11,11 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.google.gson.JsonObject;
-import com.news.newsapp.R;
-import com.news.newsapp.adapters.Adapter;
-import com.news.newsapp.model.News;
+import com.seithigal.newsapp.R;
+import com.seithigal.newsapp.adapters.Adapter;
+import com.seithigal.newsapp.model.News;
 
 import org.json.JSONArray;
 import org.json.JSONException;

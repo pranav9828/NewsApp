@@ -1,4 +1,4 @@
-package com.news.newsapp.model;
+package com.seithigal.newsapp.model;
 
 public class News {
     private String author;

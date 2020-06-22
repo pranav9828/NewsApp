@@ -1,4 +1,4 @@
-package com.news.newsapp.activities;
+package com.seithigal.newsapp.activities;
 
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.news.newsapp">
+    package="com.seithigal.newsapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -12,13 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activities.NewsDetail"
+            android:name="com.seithigal.newsapp.activities.NewsDetail"
             android:screenOrientation="portrait"
-            android:parentActivityName=".activities.MainActivity">
+            android:parentActivityName="com.seithigal.newsapp.activities.MainActivity">
 
         </activity>
         <activity
-            android:name=".activities.SplashScreen"
+            android:name="com.seithigal.newsapp.activities.SplashScreen"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
@@ -28,7 +28,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.MainActivity"
+            android:name="com.seithigal.newsapp.activities.MainActivity"
             android:screenOrientation="portrait" />
     </application>
 
