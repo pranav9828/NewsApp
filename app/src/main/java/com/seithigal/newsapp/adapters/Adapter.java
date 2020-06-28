@@ -79,8 +79,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder>{
                 .transition(DrawableTransitionOptions.withCrossFade())
                 .into(holder.imageView);
 
-        holder.author.setText(news.get(position).getAuthor());
-        holder.description.setText(news.get(position).getDescription());
         holder.title.setText(news.get(position).getTitle());
         holder.time.setText("\u2022" + Utils.DateToTimeFormat(model.getPublishedAt()));
         holder.publishedAd.setText(Utils.DateFormat(model.getPublishedAt()));
@@ -95,6 +93,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder>{
                 intent.putExtra("publishedAd", Utils.DateFormat(model.getPublishedAt()));
                 intent.putExtra("imageUrl", model.getUrlToImage());
                 intent.putExtra("url", model.getUrl());
+                intent.putExtra("content", model.getContent());
                 context.startActivity(intent);
             }
         });
@@ -107,15 +106,13 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder>{
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 
-        TextView author, title, description, time, publishedAd;
+        TextView title, time, publishedAd;
         ImageView imageView;
         ProgressBar progressBar;
         CardView cardView;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            author = itemView.findViewById(R.id.author);
             title = itemView.findViewById(R.id.title);
-            description = itemView.findViewById(R.id.desc);
             time = itemView.findViewById(R.id.time);
             publishedAd = itemView.findViewById(R.id.publishedAt);
             imageView = itemView.findViewById(R.id.img);

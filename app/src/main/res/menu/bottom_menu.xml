@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_headlines" android:title="Headlines" android:icon="@drawable/world"/>
+    <item android:id="@+id/nav_news" android:title="Category" android:icon="@drawable/news1"/>
+    <item android:id="@+id/nav_newstand" android:title="Channels" android:icon="@drawable/tv_23"/>
+</menu>

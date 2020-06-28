@@ -7,11 +7,12 @@ public class News {
     private String url;
     private String publishedAt;
     private String urlToImage;
+    private String content;
 
     public News() {
     }
 
-    public News(String author, String title, String description, String url, String publishedAt, String urlToImage) {
+    public News(String author, String title, String description, String url, String publishedAt, String urlToImage, String content) {
         this.author = author;
         this.title = title;
         this.description = description;
@@ -66,5 +67,13 @@ public class News {
 
     public void setUrlToImage(String urlToImage) {
         this.urlToImage = urlToImage;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
 }
